@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Wisuda Jenny</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- MUSIK -->
+<!-- ========================= -->
+
+<audio autoplay loop>
+    <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<!-- ========================= -->
+<!-- LOVE BERJATUHAN -->
+<!-- ========================= -->
+
+<div class="love-container">
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+    <span>❤️</span>
+    <span>💘</span>
+</div>
+
+<!-- ========================= -->
+<!-- NAILONG BERJATUHAN -->
+<!-- ========================= -->
+
+<div class="nailong-container">
+
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n1">
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n2">
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n3">
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n4">
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n5">
+    <img src="https://i.imgur.com/W5D6K7D.png" class="nailong-fall n6">
+
+</div>
+
+<!-- ========================= -->
+<!-- FOTO BACKGROUND -->
+<!-- ========================= -->
+
+<img src="foto1.png" class="bg-photo left-top">
+<img src="foto2.png" class="bg-photo left-bottom">
+
+<img src="jenny1.png" class="bg-photo right-top">
+<img src="jenny2.png" class="bg-photo right-bottom">
+
+<!-- ========================= -->
+<!-- OPENING -->
+<!-- ========================= -->
+
+<div class="opening" id="opening">
+
+    <div class="open-card">
+
+        <h1>💌</h1>
+
+        <h2>Undangan Wisuda</h2>
+
+        <p>
+            Untuk Jenny Rumiris Marpaung ❤️
+        </p>
+
+        <button onclick="openInvitation()">
+            Buka Undangan ✨
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MAIN CONTENT -->
+<!-- ========================= -->
+
+<div class="container" id="mainContent">
+
+    <h1 class="title">
+        🎓 Undangan Wisuda 🎓
+    </h1>
+
+    <div class="card">
+
+        <h2>Untuk Pacarku Tercinta 💖</h2>
+
+        <h1 class="name">
+            Jenny Rumiris Marpaung
+        </h1>
+
+        <!-- COUNTDOWN -->
+
+        <div class="countdown">
+
+            <div class="box">
+                <h2 id="days">00</h2>
+                <p>Hari</p>
+            </div>
+
+            <div class="box">
+                <h2 id="hours">00</h2>
+                <p>Jam</p>
+            </div>
+
+            <div class="box">
+                <h2 id="minutes">00</h2>
+                <p>Menit</p>
+            </div>
+
+            <div class="box">
+                <h2 id="seconds">00</h2>
+                <p>Detik</p>
+            </div>
+
+        </div>
+
+        <p class="text">
+
+            Sayangku Jenny ❤️
+            <br><br>
+
+            Aku mengundangmu untuk hadir di momen spesialku ini.
+            Hari ketika aku resmi menyelesaikan perjalanan panjang penuh doa dan perjuangan selama lebih dari 4 tahun ✨
+
+            <br><br>
+
+            Tidak lengkap rasanya tanpa kehadiranmu yang selalu memberi semangat 💕
+
+        </p>
+
+        <!-- DETAIL -->
+
+        <div class="details">
+
+            <p>📅 16 Mei 2026</p>
+
+            <p>⏰ 08.00 WIB</p>
+
+            <p>📍 Gedung Koinonia UKDW</p>
+
+        </div>
+
+        <p class="closing">
+
+            Aku berharap kamu bisa datang ya sayang ❤️
+            Karena aku ingin kamu hadir menemani bapak
+            dan berdiri sebagai pasanganku di hari bahagia ini ✨
+
+            <br><br>
+
+            Love you always 💖
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script>
+
+function openInvitation(){
+
+    document.getElementById("opening").style.display = "none";
+
+    document.getElementById("mainContent").style.display = "block";
+}
+
+/* COUNTDOWN */
+
+const targetDate = new Date("May 16, 2026 08:00:00").getTime();
+
+setInterval(function(){
+
+    const now = new Date().getTime();
+
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
+
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+
+    document.getElementById("hours").innerHTML = hours;
+
+    document.getElementById("minutes").innerHTML = minutes;
+
+    document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>

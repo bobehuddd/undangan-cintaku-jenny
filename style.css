@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#ffe1ec,#fff5f8);
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* ========================= */
+/* OPENING */
+/* ========================= */
+
+.opening{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:rgba(255,240,246,0.97);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.open-card{
+    background:white;
+    padding:40px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(255,105,180,0.3);
+    animation:fadeIn 2s;
+}
+
+.open-card h1{
+    font-size:60px;
+}
+
+.open-card h2{
+    color:#ff5f9e;
+    margin-top:10px;
+}
+
+.open-card p{
+    margin-top:10px;
+    color:#666;
+}
+
+.open-card button{
+    margin-top:20px;
+    border:none;
+    padding:15px 30px;
+    background:#ff6ea9;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.open-card button:hover{
+    transform:scale(1.05);
+    background:#ff4f98;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.container{
+    display:none;
+    position:relative;
+    z-index:2;
+    max-width:700px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.title{
+    text-align:center;
+    color:#ff5f9e;
+    font-size:42px;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+.card{
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(255,105,180,0.2);
+}
+
+.name{
+    color:#ff5f9e;
+    font-size:38px;
+    margin:20px 0;
+}
+
+/* ========================= */
+/* COUNTDOWN */
+/* ========================= */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.box{
+    background:white;
+    width:100px;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(255,105,180,0.15);
+}
+
+.box h2{
+    color:#ff5f9e;
+    font-size:32px;
+}
+
+.box p{
+    margin-top:5px;
+    font-size:14px;
+}
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+
+.text{
+    line-height:1.8;
+    color:#555;
+    font-size:16px;
+}
+
+.details{
+    margin-top:25px;
+    background:#fff2f7;
+    padding:20px;
+    border-radius:20px;
+}
+
+.details p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+.closing{
+    margin-top:25px;
+    font-style:italic;
+    color:#666;
+    line-height:1.8;
+}
+
+/* ========================= */
+/* FOTO BACKGROUND */
+/* ========================= */
+
+.bg-photo{
+    position:fixed;
+    width:280px;
+    opacity:0.23;
+    z-index:0;
+}
+
+.left-top{
+    top:0;
+    left:0;
+}
+
+.left-bottom{
+    bottom:0;
+    left:0;
+}
+
+.right-top{
+    top:0;
+    right:0;
+}
+
+.right-bottom{
+    bottom:0;
+    right:0;
+}
+
+/* ========================= */
+/* LOVE BERJATUHAN */
+/* ========================= */
+
+.love-container span{
+    position:fixed;
+    top:-100px;
+    font-size:25px;
+    animation:loveFall 10s linear infinite;
+    z-index:1;
+}
+
+.love-container span:nth-child(1){
+    left:10%;
+    animation-delay:0s;
+}
+
+.love-container span:nth-child(2){
+    left:25%;
+    animation-delay:2s;
+}
+
+.love-container span:nth-child(3){
+    left:45%;
+    animation-delay:4s;
+}
+
+.love-container span:nth-child(4){
+    left:65%;
+    animation-delay:1s;
+}
+
+.love-container span:nth-child(5){
+    left:80%;
+    animation-delay:3s;
+}
+
+.love-container span:nth-child(6){
+    left:95%;
+    animation-delay:5s;
+}
+
+@keyframes loveFall{
+
+    0%{
+        transform:translateY(-100px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(120vh);
+        opacity:0;
+    }
+
+}
+
+/* ========================= */
+/* NAILONG BERJATUHAN */
+/* ========================= */
+
+.nailong-container{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.nailong-fall{
+    position:absolute;
+    width:70px;
+    opacity:0.8;
+    animation:nailongFall linear infinite;
+}
+
+.n1{
+    left:5%;
+    animation-duration:14s;
+    animation-delay:0s;
+}
+
+.n2{
+    left:20%;
+    animation-duration:18s;
+    animation-delay:2s;
+}
+
+.n3{
+    left:40%;
+    animation-duration:16s;
+    animation-delay:4s;
+}
+
+.n4{
+    left:60%;
+    animation-duration:20s;
+    animation-delay:1s;
+}
+
+.n5{
+    left:80%;
+    animation-duration:15s;
+    animation-delay:3s;
+}
+
+.n6{
+    left:92%;
+    animation-duration:19s;
+    animation-delay:5s;
+}
+
+@keyframes nailongFall{
+
+    0%{
+        transform:
+        translateY(-150px)
+        rotate(0deg)
+        scale(0.8);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:0.8;
+    }
+
+    50%{
+        transform:
+        translateY(50vh)
+        rotate(180deg)
+        scale(1);
+    }
+
+    100%{
+        transform:
+        translateY(120vh)
+        rotate(360deg)
+        scale(0.8);
+
+        opacity:0;
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .bg-photo{
+        width:160px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+    .name{
+        font-size:28px;
+    }
+
+    .box{
+        width:80px;
+    }
+
+    .box h2{
+        font-size:24px;
+    }
+
+    .nailong-fall{
+        width:45px;
+    }
+
+}
